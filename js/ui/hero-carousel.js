@@ -1,32 +1,52 @@
-// Hero background carousel — fades through the slides at a fixed interval.
+// Hero background carousel — fades through 4 slides at a fixed interval,
+// also rendering navigation dots that let the user jump to any slide.
 // Pauses while the tab is hidden and resumes on focus.
 
-const INTERVAL_MS = 5000;
+const INTERVAL_MS = 5500;
 
 export function initHeroCarousel() {
-  const slides = Array.from(document.querySelectorAll('#hero-bg img'));
-  if (slides.length < 2) return;
+  const slides = Array.from(document.querySelectorAll('.hero-bg-slide'));
+  const dotsHost = document.getElementById('hero-bg-dots');
+  if (slides.length < 2 || !dotsHost) return;
 
-  // Respect users who prefer no motion — keep the first slide static.
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduceMotion) return;
 
-  let active = slides.findIndex((s) => s.classList.contains('is-active'));
-  if (active < 0) {
-    active = 0;
-    slides[0].classList.add('is-active');
+  // Build clickable dots
+  const dots = slides.map((_, i) => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'hero-bg-dot' + (i === 0 ? ' is-active' : '');
+    btn.setAttribute('role', 'tab');
+    btn.setAttribute('aria-label', `Slide ${i + 1}`);
+    btn.setAttribute('aria-selected', String(i === 0));
+    btn.addEventListener('click', () => goTo(i));
+    return btn;
+  });
+  dotsHost.replaceChildren(...dots);
+
+  let active = 0;
+  let timer = null;
+
+  function goTo(i) {
+    if (i === active) return;
+    slides[active].classList.remove('is-active');
+    dots[active].classList.remove('is-active');
+    dots[active].setAttribute('aria-selected', 'false');
+
+    active = i;
+    slides[active].classList.add('is-active');
+    dots[active].classList.add('is-active');
+    dots[active].setAttribute('aria-selected', 'true');
+
+    // Reset the auto-advance timer when the user clicks a dot
+    if (timer) start();
   }
 
-  let timer = null;
-  const advance = () => {
-    slides[active].classList.remove('is-active');
-    active = (active + 1) % slides.length;
-    slides[active].classList.add('is-active');
-  };
+  const advance = () => goTo((active + 1) % slides.length);
 
   const start = () => {
     stop();
-    timer = setInterval(advance, INTERVAL_MS);
+    if (!reduceMotion) timer = setInterval(advance, INTERVAL_MS);
   };
   const stop = () => {
     if (timer) { clearInterval(timer); timer = null; }

@@ -42,9 +42,11 @@ export const CONTENT = {
     'process.title':   'Four steps. One dedicated contact.',
     'process.lead':    'Built around your shipment — not our process.',
 
-    'about.eyebrow':       'About Gemmia',
-    'about.title':         '<span>One team.</span><span>No matter where your cargo moves.</span>',
-    'about.paragraphs.0':  'Whether we handle it directly from our own offices or coordinate through our agent network, your single point of contact at Gemmia manages every step — documentation, customs, tracking and delivery.',
+    'about.eyebrow':       'Who we are',
+    'about.title':         '<span>Built by logistics professionals,</span><span>for global businesses.</span>',
+    'about.paragraphs.0':  'Gemmia Logistics brings together professionals with over 15 years of hands-on experience in international freight forwarding across South America and the United States.',
+    'about.paragraphs.1':  'We operate on a simple belief: every shipment deserves the same level of attention, precision and care. With own offices in Buenos Aires, Santiago de Chile and Miami, we specialize in complex, regulated and time-sensitive cargo — including pharmaceuticals and project freight — backed by 150+ agents across 180 countries.',
+    'about.paragraphs.2':  'One point of contact. Full visibility. End-to-end accountability.',
 
     'offices.eyebrow': 'Our offices',
     'offices.title':   '<span>Three markets.</span><span>One seamless operation.</span>',
@@ -85,7 +87,7 @@ export const CONTENT = {
     'hero.sub':             'Desde cualquier origen a cualquier destino — gestionamos tu carga en todo el mundo, respaldados por oficinas propias en Argentina, Chile y Estados Unidos y una red de más de 150 agentes en 180 países.',
     'hero.cta':             'Cotizar',
     'hero.scroll':          'Desliza para explorar',
-    'hero.stats.countries': 'países de cobertura',
+    'hero.stats.countries': 'cobertura en países',
     'hero.stats.agents':    'agentes en el mundo',
     'hero.stats.offices':   'oficinas propias',
     'hero.stats.contact':   'punto de contacto',
@@ -112,9 +114,11 @@ export const CONTENT = {
     'process.title':   'Cuatro pasos. Un contacto dedicado.',
     'process.lead':    'Pensado para tu envío — no para nuestro proceso.',
 
-    'about.eyebrow':      'Sobre Gemmia',
-    'about.title':        '<span>Un solo equipo.</span><span>No importa dónde se mueva tu carga.</span>',
-    'about.paragraphs.0': 'Ya sea que la operemos directamente desde nuestras oficinas propias o la coordinemos a través de nuestra red de agentes, tu único punto de contacto en Gemmia gestiona cada paso — documentación, aduana, tracking y entrega.',
+    'about.eyebrow':      'Quiénes somos',
+    'about.title':        '<span>Construido por profesionales de la logística,</span><span>para empresas globales.</span>',
+    'about.paragraphs.0': 'Gemmia Logistics reúne a profesionales con más de 15 años de experiencia directa en freight forwarding internacional en Sudamérica y los Estados Unidos.',
+    'about.paragraphs.1': 'Operamos bajo una creencia simple: cada envío merece el mismo nivel de atención, precisión y cuidado. Con oficinas propias en Buenos Aires, Santiago de Chile y Miami, nos especializamos en carga compleja, regulada y sensible al tiempo — incluyendo productos farmacéuticos y carga de proyecto — respaldados por más de 150 agentes en 180 países.',
+    'about.paragraphs.2': 'Un solo punto de contacto. Visibilidad total. Responsabilidad de punta a punta.',
 
     'offices.eyebrow': 'Nuestras oficinas',
     'offices.title':   '<span>Tres mercados.</span><span>Una operación sin fricciones.</span>',
@@ -153,7 +157,7 @@ export const SERVICES = [
              es: 'Carga urgente, manejada con velocidad y cuidado.' },
     body:  { en: 'Direct and consolidated services, charter solutions, and specialized handling — including pharma and healthcare cargo coordinated with certified cold chain partners, perishables and high-value goods.',
              es: 'Servicios directos y consolidados, soluciones charter, y manejo especializado — incluyendo carga farmacéutica y healthcare coordinada con socios certificados de cadena de frío, perecederos y mercancías de alto valor.' },
-    img: 'https://images.unsplash.com/photo-1583863788434-e58a36330cf0?w=1200&q=80&auto=format&fit=crop'
+    img: 'assets/services/air-freight.jpg'
   },
   {
     n: '02',
@@ -162,7 +166,7 @@ export const SERVICES = [
              es: 'Soluciones FCL y LCL desde y hacia cualquier puerto del mundo.' },
     body:  { en: 'Cost-effective, reliable and fully tracked from origin to destination. Long-term carrier relationships across all major trade lanes.',
              es: 'Económico, confiable y trazado desde origen a destino. Relaciones consolidadas con carriers en todas las rutas comerciales principales.' },
-    img: 'https://images.unsplash.com/photo-1605281317010-fe5ffe798166?w=1200&q=80&auto=format&fit=crop'
+    img: 'assets/services/ocean-freight.jpg'
   },
   {
     n: '03',
@@ -171,33 +175,33 @@ export const SERVICES = [
              es: 'Transporte transfronterizo y distribución interna.' },
     body:  { en: 'Across South America and the United States. Full and partial loads tailored to your needs, with real-time tracking and dedicated coordination.',
              es: 'Sudamérica y Estados Unidos. Cargas completas y parciales adaptadas a tus necesidades, con tracking en tiempo real y coordinación dedicada.' },
-    img: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1200&q=80&auto=format&fit=crop'
+    img: 'assets/services/ground-freight.jpg'
   },
   {
     n: '04',
-    name:  { en: 'Customs Brokerage',   es: 'Despacho Aduanero' },
-    short: { en: 'Expert handling of import and export documentation.',
-             es: 'Manejo experto de documentación de importación y exportación.' },
-    body:  { en: "Argentina, Chile and the United States. We navigate regulations so your shipments don't stop at the border.",
-             es: 'Argentina, Chile y Estados Unidos. Navegamos las regulaciones para que tus envíos no se detengan en la frontera.' },
-    img: 'https://images.unsplash.com/photo-1494412651409-8963ce7935a7?w=1200&q=80&auto=format&fit=crop'
-  },
-  {
-    n: '05',
     name:  { en: 'Air Charter',         es: 'Charter Aéreo' },
     short: { en: "When standard options aren't enough.",
              es: 'Cuando las opciones estándar no alcanzan.' },
     body:  { en: 'Full aircraft charters for urgent, oversized or high-value cargo — available 24/7 globally. Single point of contact from quote to wheels-down.',
              es: 'Charters de aeronaves completas para carga urgente, sobredimensionada o de alto valor — disponible 24/7 globalmente. Un único punto de contacto.' },
-    img: 'https://images.unsplash.com/photo-1569154941061-e231b4725ef1?w=1200&q=80&auto=format&fit=crop'
+    img: 'assets/svc-charter.jpg'
   },
   {
-    n: '06',
-    name:  { en: 'Customs Broker',      es: 'Agente de Aduana' },
+    n: '05',
+    name:  { en: 'Customs Brokerage',   es: 'Despacho Aduanero' },
     short: { en: 'Licensed customs brokerage in three countries.',
              es: 'Despacho aduanero licenciado en tres países.' },
     body:  { en: 'Argentina, Chile and the United States. We manage every import and export declaration — tariff classification, permits, certificates of origin, and compliance with all applicable trade regulations — so your cargo clears without delays or penalties.',
              es: 'Argentina, Chile y Estados Unidos. Gestionamos cada declaración de importación y exportación — clasificación arancelaria, permisos, certificados de origen, y cumplimiento de las regulaciones aplicables — para que tu carga libere sin demoras ni penalidades.' },
+    img: 'https://images.unsplash.com/photo-1494412651409-8963ce7935a7?w=1200&q=80&auto=format&fit=crop'
+  },
+  {
+    n: '06',
+    name:  { en: 'Cargo Insurance',     es: 'Seguro de Carga' },
+    short: { en: 'Your cargo, protected end to end.',
+             es: 'Tu carga, protegida de punta a punta.' },
+    body:  { en: "We arrange comprehensive cargo insurance coverage for every shipment — air, ocean or ground. From quote to claim, we manage the process so you don't have to.",
+             es: 'Coordinamos cobertura integral de seguro de carga para cada envío — aéreo, marítimo o terrestre. Desde la cotización hasta el reclamo, gestionamos el proceso para que no tengas que hacerlo.' },
     img: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80&auto=format&fit=crop'
   }
 ];
@@ -247,7 +251,7 @@ export const OFFICES = [
     city:    'Miami',
     country: { en: 'United States', es: 'Estados Unidos' },
     address: '7500 NW 25th Street, Suite 246\nMiami, Florida 33122',
-    coord:   { x: 30.5, y: 50 }
+    coord:   { x: 33.5, y: 45 }
   }
 ];
 
@@ -255,3 +259,10 @@ export const TRANSPORT_MODES = {
   en: ['Air', 'Ocean', 'Ground', 'Charter', 'Customs'],
   es: ['Aéreo', 'Marítimo', 'Terrestre', 'Charter', 'Aduana']
 };
+
+export const HERO_SLIDES = [
+  'assets/hero/portada-1.jpg',
+  'assets/hero/portada-2.jpg',
+  'assets/hero/portada-3.jpg',
+  'assets/hero/portada-4.jpg'
+];
