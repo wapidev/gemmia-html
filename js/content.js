@@ -247,7 +247,7 @@ export const OFFICES = [
     city:    'Miami',
     country: { en: 'United States', es: 'Estados Unidos' },
     address: '7500 NW 25th Street, Suite 246\nMiami, Florida 33122',
-    coord:   { x: 34.5, y: 43.5 }
+    coord:   { x: 30.5, y: 50 }
   }
 ];
 
